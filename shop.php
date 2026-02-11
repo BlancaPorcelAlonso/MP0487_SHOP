@@ -32,7 +32,7 @@ if (isset($_POST['product'])) {
 
     if (
         isset($_SESSION['stock'][$product]) &&
-        $_SESSION['stock'][$product] >= 0 
+        $_SESSION['stock'][$product] > 0 
     ) {
         // Increase quantity in cart
         if (!isset($_SESSION['cart'][$product])) {
@@ -333,7 +333,6 @@ foreach ($_SESSION['cart'] as $item => $qty) {
     </div>
 </div>
 
-            
             <div class="cart-actions">
                 <a href="checkout.php" class="btn btn-checkout">🛒 Go to Checkout</a>
             </div>

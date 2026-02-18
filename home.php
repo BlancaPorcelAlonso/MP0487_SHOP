@@ -1,6 +1,5 @@
 <?php
 session_start();
-session_unset();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -135,7 +134,8 @@ session_unset();
     </style>
 </head>
 <body>
-    <?php if (isset($_SESSION['user'])): ?>
+    
+    <?php if (isset($_SESSION['user'])): echo __LINE__ ?>
     <header>
         <div class="header-content">
             <span style="font-weight: 600;">🏠 Mini Shop</span>
